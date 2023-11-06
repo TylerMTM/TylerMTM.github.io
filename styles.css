@@ -1,0 +1,183 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: black;
+  animation: fadeBackground 5s forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+@keyframes fadeBackground {
+  to { background-color: rgb(247, 233, 210); }
+}
+
+.container {
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  box-sizing: border-box; /* Fixes the box-sizing to prevent overflow */
+}
+
+.logo {
+  max-width: 300px;
+  position: absolute;
+  height: left;
+  position: left;
+  top: 20px;
+  left: 20px;
+}
+.top{
+  margin-top: 8em;;
+  margin-bottom: 2em;
+}
+h1, p {
+  color: rgb(0, 0, 0); /* Assuming you want white text, change as necessary */
+}
+
+h1 {
+  font-size: 2.25em; /* 36px/16px */
+  margin: 0;
+}
+
+p {
+  font-size: 1.125em; /* 18px/16px */
+  margin: 0;
+  padding: 10px;
+}
+
+form {
+  margin-top: 0.5em;
+}
+
+input[type=email], button {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.button{
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 14.5px;
+  font-weight: 600;
+  justify-content: center;
+  margin: 0;
+  padding: 0.8em;
+}
+
+.button:hover,
+.button:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button:active {
+  background-color: #F0F0F1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  flex: 1; /* Cards will expand to fill the space */
+  max-width: 350px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 10px;
+  background: #f9f9f9;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 15px;
+}
+
+.card-title, .creator, .likes, .current-bid, .time-remaining {
+  margin: 10px 0;
+}
+
+.creator, .time-remaining {
+  color: grey;
+}
+
+@media (max-width: 768px) {
+
+
+  .container {
+    margin: 0;
+  }
+
+  .card-container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.5em; /* Adjusted for smaller screens */
+  }
+
+  p {
+    font-size: 1em; /* Adjusted for smaller screens */
+  }
+
+
+  form input[type=email], form button {
+    width: 100%; /* Full width inputs on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  
+  .top{
+    margin-top: 2em;
+    margin-bottom: 1em;
+  }
+  .logo {
+    max-width: 100;
+    position: static;
+    display: block;
+    margin: auto;
+    margin-bottom: 2em;
+    
+  }
+
+  .card-container {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+
+   
+  }
+}
